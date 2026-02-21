@@ -487,7 +487,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Esher</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">KT10 • Surrey</span>
                 </div>
-                <Link href="#" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/bathroom-fitters-esher-kt10" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
                   View
                 </Link>
               </div>
@@ -499,7 +499,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Cobham</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">KT11 • Surrey</span>
                 </div>
-                <Link href="#" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/luxury-bathrooms-cobham-kt11" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
                   View
                 </Link>
               </div>
@@ -511,7 +511,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Wimbledon</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">SW19 • South West</span>
                 </div>
-                <Link href="#" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/bathroom-fitters-wimbledon-sw19" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
                   View
                 </Link>
               </div>
@@ -523,7 +523,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Kingston</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">KT1 • Surrey</span>
                 </div>
-                <Link href="#" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/bathroom-fitters-kingston-kt1" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
                   View
                 </Link>
               </div>
