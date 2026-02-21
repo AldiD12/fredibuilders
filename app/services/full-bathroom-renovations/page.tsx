@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
+import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -247,6 +248,7 @@ export default function FullBathroomRenovations() {
         </section>
       </main>
       <Footer />
+      <WhatsAppFloatButton />
     </>
   )
 }

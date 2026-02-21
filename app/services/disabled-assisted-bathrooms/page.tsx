@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
+import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 
 export const metadata: Metadata = {
   title: 'Disabled-Assisted Bathrooms Surrey | Accessible Bathroom Specialists',
@@ -204,6 +205,7 @@ export default function DisabledAssistedBathrooms() {
         </section>
       </main>
       <Footer />
+      <WhatsAppFloatButton />
     </>
   )
 }

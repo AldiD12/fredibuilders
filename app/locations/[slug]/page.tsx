@@ -14,6 +14,7 @@ import ReviewsLink from '@/app/components/ReviewsLink'
 import LocationReviews from '@/app/components/LocationReviews'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
+import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 
 export async function generateStaticParams() {
   return locations.map((location) => ({
@@ -374,6 +375,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
         </section>
       </main>
       <Footer />
+      <WhatsAppFloatButton />
     </>
   )
 }

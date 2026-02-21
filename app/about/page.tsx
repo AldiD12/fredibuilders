@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import Image from 'next/image'
+import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 
 import FounderSchema from '@/app/components/FounderSchema'
 
@@ -172,6 +173,7 @@ export default function About() {
         </section>
       </main>
       <Footer />
+      <WhatsAppFloatButton />
     </>
   )
 }

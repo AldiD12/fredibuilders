@@ -3,6 +3,7 @@ import MultiStepForm from '@/app/components/MultiStepForm'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import ContactMethods from '@/app/components/ContactMethods'
+import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 
 export const metadata: Metadata = {
   title: 'Get Fixed-Price Quote | Fredi Builders',
@@ -93,6 +94,7 @@ export default function Contact() {
       </div>
     </main>
     <Footer />
+    <WhatsAppFloatButton />
     </>
   )
 }
