@@ -6,6 +6,7 @@ import ReviewsFilter from '@/app/components/ReviewsFilter'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import PhoneLink from '@/app/components/PhoneLink'
+import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 
 export const metadata: Metadata = {
   title: 'Customer Reviews - 104+ Verified Reviews | Fredi Builders',
@@ -120,6 +121,7 @@ export default function ReviewsPage() {
       </main>
       
       <Footer />
+      <WhatsAppFloatButton />
     </>
   )
 }

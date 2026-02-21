@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { locations, getLocationsByZone } from '@/app/data/locations'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
+import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 
 export const metadata: Metadata = {
   title: 'Areas We Serve | Bathroom Fitters Surrey & South London | Fredi Builders',
@@ -243,6 +244,7 @@ export default function Locations() {
       </section>
     </main>
     <Footer />
+    <WhatsAppFloatButton />
     </>
   )
 }

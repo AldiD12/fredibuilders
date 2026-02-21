@@ -5,6 +5,7 @@ import ImageGallerySchema from '@/app/components/schemas/ImageGallerySchema'
 import GalleryClient from './GalleryClient'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
+import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 
 export const metadata: Metadata = {
   title: 'Project Gallery - Luxury Bathroom Renovations | Fredi Builders',
@@ -69,6 +70,7 @@ export default function GalleryPage() {
       </main>
       
       <Footer />
+      <WhatsAppFloatButton />
     </>
   )
 }

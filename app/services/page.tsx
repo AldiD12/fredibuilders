@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
+import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 
 export const metadata: Metadata = {
   title: 'Our Services | Bathroom Renovations & Building Services | Fredi Builders',
@@ -96,6 +97,7 @@ export default function Services() {
         </div>
       </main>
       <Footer />
+      <WhatsAppFloatButton />
     </>
   )
 }
