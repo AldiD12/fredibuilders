@@ -59,14 +59,12 @@ const urls = [
 
 async function indexURL(url) {
   try {
-    // Create JWT client
-    const jwtClient = new google.auth.JWT(
-      key.client_email,
-      null,
-      key.private_key,
-      ['https://www.googleapis.com/auth/indexing'],
-      null
-    );
+    // Create JWT client with credentials
+    const jwtClient = new google.auth.JWT({
+      email: key.client_email,
+      key: key.private_key,
+      scopes: ['https://www.googleapis.com/auth/indexing']
+    });
 
     // Authorize
     await jwtClient.authorize();
