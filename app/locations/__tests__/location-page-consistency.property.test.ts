@@ -150,7 +150,7 @@ describe('Property 18: Location Page Structural Consistency', () => {
     expect(ctaMatches).not.toBeNull()
     expect(ctaMatches!.length).toBeGreaterThanOrEqual(1) // At least in Hero
     
-    const callMatches = locationPageTemplate.match(/Call: 07404 304224/g)
+    const callMatches = locationPageTemplate.match(/Call: 07468 451511/g)
     expect(callMatches).not.toBeNull()
     expect(callMatches!.length).toBeGreaterThanOrEqual(1)
   })

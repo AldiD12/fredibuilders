@@ -58,7 +58,7 @@ function generateReviewSchemas(reviews: Review[]): any[] {
       '@type': 'LocalBusiness',
       name: 'Fredi Builders',
       image: 'https://fredibuilders.co.uk/og-image.jpg',
-      telephone: '+447404304224',
+      telephone: '+447468451511',
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'GB'

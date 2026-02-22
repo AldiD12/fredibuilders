@@ -245,7 +245,7 @@ describe('Property 15: Form Data Transmission', () => {
     formData.append('service', 'Bathroom')
     formData.append('postcode', 'SW16 1AB')
     formData.append('name', 'John Smith')
-    formData.append('phone', '07404304224')
+    formData.append('phone', '07468451511')
     formData.append('email', 'john@example.com')
 
     // Add mock photo files
@@ -266,7 +266,7 @@ describe('Property 15: Form Data Transmission', () => {
     formData.append('service', 'Bathroom')
     formData.append('postcode', 'SW16 1AB')
     formData.append('name', '<script>alert("xss")</script>')
-    formData.append('phone', '07404304224')
+    formData.append('phone', '07468451511')
     formData.append('email', 'test@example.com')
 
     const result = await submitLead(formData)
@@ -283,7 +283,7 @@ describe('Property 15: Form Data Transmission', () => {
       formData.append('service', service)
       formData.append('postcode', 'SW16 1AB')
       formData.append('name', 'John Smith')
-      formData.append('phone', '07404304224')
+      formData.append('phone', '07468451511')
       formData.append('email', 'john@example.com')
 
       const result = await submitLead(formData)
@@ -301,7 +301,7 @@ describe('Property 15: Form Data Transmission', () => {
       formData.append('service', 'Bathroom')
       formData.append('postcode', postcode)
       formData.append('name', 'John Smith')
-      formData.append('phone', '07404304224')
+      formData.append('phone', '07468451511')
       formData.append('email', 'john@example.com')
 
       const result = await submitLead(formData)
@@ -311,7 +311,7 @@ describe('Property 15: Form Data Transmission', () => {
   })
 
   test('validates phone format strictly', async () => {
-    const validPhones = ['07404304224', '02012345678', '+447404304224']
+    const validPhones = ['07468451511', '02012345678', '+447468451511']
     
     for (const phone of validPhones) {
       const formData = new FormData()

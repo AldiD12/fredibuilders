@@ -25,7 +25,7 @@ function generateLocationSchemas(location: Location, url: string) {
       image: 'https://fredibuilders.co.uk/og-image.jpg',
       description: location.description,
       url: url,
-      telephone: '+447404304224',
+      telephone: '+447468451511',
       priceRange: '££',
       address: {
         '@type': 'PostalAddress',
@@ -78,7 +78,7 @@ function generateLocationSchemas(location: Location, url: string) {
       provider: {
         '@type': 'LocalBusiness',
         name: 'Fredi Builders',
-        telephone: '+447404304224'
+        telephone: '+447468451511'
       },
       areaServed: {
         '@type': 'City',

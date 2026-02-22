@@ -150,8 +150,8 @@ describe('Property 11: Form Step Progression', () => {
   })
 
   test('step 4 validation fails for empty name', () => {
-    expect(validateStep4('', '07404304224', 'test@example.com')).toBe(false)
-    expect(validateStep4('   ', '07404304224', 'test@example.com')).toBe(false)
+    expect(validateStep4('', '07468451511', 'test@example.com')).toBe(false)
+    expect(validateStep4('   ', '07468451511', 'test@example.com')).toBe(false)
   })
 
   test('step 4 validation fails for invalid phone', () => {
@@ -182,7 +182,7 @@ describe('Property 11: Form Step Progression', () => {
           fc.constant('test@.com')
         ),
         (invalidEmail) => {
-          expect(validateStep4('John Smith', '07404304224', invalidEmail)).toBe(false)
+          expect(validateStep4('John Smith', '07468451511', invalidEmail)).toBe(false)
         }
       ),
       { numRuns: 100 }

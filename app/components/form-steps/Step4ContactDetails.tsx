@@ -53,7 +53,7 @@ export default function Step4ContactDetails({
             id="phone"
             value={phone}
             onChange={(e) => onPhoneChange(e.target.value)}
-            placeholder="07404 304224"
+            placeholder="07468 451511"
             className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 ${
               errors.phone ? 'border-red-500' : 'border-slate-300'
             }`}

@@ -163,12 +163,12 @@ describe('Property 17: Location Page Data Display', () => {
     expect(locationPageTemplate).toContain('bg-primary')
     
     // Verify secondary Call option
-    expect(locationPageTemplate).toContain('Call: 07404 304224')
-    expect(locationPageTemplate).toContain('tel:07404304224')
+    expect(locationPageTemplate).toContain('Call: 07468 451511')
+    expect(locationPageTemplate).toContain('tel:07468451511')
     
     // Verify the primary CTA appears before the secondary CTA in the hero
     const primaryIndex = locationPageTemplate.indexOf('Get Fixed-Price Quote')
-    const secondaryIndex = locationPageTemplate.indexOf('Call: 07404 304224')
+    const secondaryIndex = locationPageTemplate.indexOf('Call: 07468 451511')
     expect(primaryIndex).toBeLessThan(secondaryIndex)
   })
 

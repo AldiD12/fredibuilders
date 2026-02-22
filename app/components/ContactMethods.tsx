@@ -18,7 +18,7 @@ export default function ContactMethods() {
           onClick={() => trackCallClick('contact-page')}
           className="text-teal-600 font-semibold hover:underline"
         >
-          07404 304224
+          07468 451511
         </a>
       </div>
 

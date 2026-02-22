@@ -15,7 +15,7 @@ function generateLocationSchemas(location: Location, url: string) {
       image: 'https://fredibuilders.co.uk/og-image.jpg',
       description: location.description,
       url: url,
-      telephone: '+447404304224',
+      telephone: '+447468451511',
       priceRange: '££',
       address: {
         '@type': 'PostalAddress',
@@ -68,7 +68,7 @@ function generateLocationSchemas(location: Location, url: string) {
       provider: {
         '@type': 'LocalBusiness',
         name: 'Fredi Builders',
-        telephone: '+447404304224'
+        telephone: '+447468451511'
       },
       areaServed: {
         '@type': 'City',
@@ -199,7 +199,7 @@ describe('LocationSchema', () => {
         expect(localBusiness.name).toContain('Fredi Builders')
         expect(localBusiness.name).toContain(location.name)
         expect(localBusiness.description).toBe(location.description)
-        expect(localBusiness.telephone).toBe('+447404304224')
+        expect(localBusiness.telephone).toBe('+447468451511')
         expect(localBusiness.priceRange).toBe('££')
 
         // Validate address
@@ -257,7 +257,7 @@ describe('LocationSchema', () => {
         // Validate provider
         expect(service.provider['@type']).toBe('LocalBusiness')
         expect(service.provider.name).toBe('Fredi Builders')
-        expect(service.provider.telephone).toBe('+447404304224')
+        expect(service.provider.telephone).toBe('+447468451511')
 
         // Validate area served
         expect(service.areaServed['@type']).toBe('City')
