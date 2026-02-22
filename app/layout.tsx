@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
+import Script from 'next/script'
 import MobileStickyFooter from './components/MobileStickyFooter'
 import './globals.css'
 
@@ -53,6 +54,20 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans">
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z93ZYR19PT"
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z93ZYR19PT');
+          `}
+        </Script>
+        
         {children}
         <MobileStickyFooter />
       </body>
