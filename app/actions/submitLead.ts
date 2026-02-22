@@ -7,7 +7,8 @@ import { Resend } from 'resend'
  * Validates data and sends email to fredibuilder18@icloud.com
  */
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Initialize Resend only if API key is available
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
 interface LeadFormData {
   service: 'Bathroom' | 'Extension' | 'Other'
@@ -206,6 +207,14 @@ Call now: ${sanitizedData.phone}
     )
 
     // Send email via Resend to both Fredi and you (for testing/backup)
+    if (!resend) {
+      console.error('Resend API key not configured')
+      return { 
+        success: false, 
+        error: 'Email service not configured. Please call us directly at 07468 451511.' 
+      }
+    }
+
     const { data, error } = await resend.emails.send({
       from: 'Fredi Builders <leads@fredibuilders.co.uk>',
       to: ['fredibuilder18@icloud.com', 'demlekaaldi1@gmail.com'],
