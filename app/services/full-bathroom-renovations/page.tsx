@@ -238,22 +238,22 @@ export default function FullBathroomRenovations() {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <Link href="/locations/bathroom-fitters-streatham-sw16" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Bathroom fitters in Streatham
+                  Our Streatham team
                 </Link>
                 <Link href="/locations/bathroom-fitters-esher-kt10" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Bathroom renovations in Esher
+                  Serving Esher KT10
                 </Link>
                 <Link href="/locations/luxury-bathrooms-dulwich-se21" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Bathroom fitters in Dulwich
+                  Recent work in Dulwich
                 </Link>
                 <Link href="/locations/bathroom-fitters-wimbledon-sw19" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Bathroom specialists in Wimbledon
+                  Wimbledon projects
                 </Link>
                 <Link href="/locations/luxury-bathrooms-cobham-kt11" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Bathroom renovations in Cobham
+                  Working in Cobham
                 </Link>
                 <Link href="/locations/bathroom-fitters-croydon-cr0" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Bathroom fitters in Croydon
+                  Croydon area coverage
                 </Link>
                 <Link href="/locations" className="text-teal-600 hover:text-teal-700 hover:underline font-bold col-span-2 md:col-span-3 text-center">
                   View All 50+ Areas We Serve →

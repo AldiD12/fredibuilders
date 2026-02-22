@@ -316,22 +316,22 @@ export default function WetRoomInstallations() {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <Link href="/locations/bathroom-fitters-esher-kt10" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Wet room installers in Esher
+                  Our Esher team
                 </Link>
                 <Link href="/locations/bathroom-fitters-wimbledon-sw19" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Wet rooms in Wimbledon
+                  Serving Wimbledon SW19
                 </Link>
                 <Link href="/locations/luxury-bathrooms-cobham-kt11" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Wet room specialists in Cobham
+                  Recent work in Cobham
                 </Link>
                 <Link href="/locations/bathroom-fitters-streatham-sw16" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Wet room fitters in Streatham
+                  Streatham projects
                 </Link>
                 <Link href="/locations/luxury-bathrooms-dulwich-se21" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Wet room installations in Dulwich
+                  Working in Dulwich
                 </Link>
                 <Link href="/locations/bathroom-fitters-croydon-cr0" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Wet rooms in Croydon
+                  Croydon area coverage
                 </Link>
                 <Link href="/locations" className="text-teal-600 hover:text-teal-700 hover:underline font-bold col-span-2 md:col-span-3 text-center">
                   View All 50+ Areas We Serve →

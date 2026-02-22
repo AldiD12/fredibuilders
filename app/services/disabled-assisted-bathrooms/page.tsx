@@ -302,22 +302,22 @@ export default function DisabledAssistedBathrooms() {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <Link href="/locations/bathroom-fitters-streatham-sw16" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Accessible bathrooms in Streatham
+                  Our Streatham team
                 </Link>
                 <Link href="/locations/bathroom-renovations-purley-cr8" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Accessible bathrooms in Purley
+                  Serving Purley CR8
                 </Link>
                 <Link href="/locations/luxury-bathrooms-dulwich-se21" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Accessible bathrooms in Dulwich
+                  Recent work in Dulwich
                 </Link>
                 <Link href="/locations/bathroom-fitters-croydon-cr0" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Accessible bathrooms in Croydon
+                  Croydon projects
                 </Link>
                 <Link href="/locations/bathroom-renovations-sutton-sm1" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Accessible bathrooms in Sutton
+                  Working in Sutton
                 </Link>
                 <Link href="/locations/luxury-bathrooms-wimbledon-sw19" className="text-teal-600 hover:text-teal-700 hover:underline">
-                  Accessible bathrooms in Wimbledon
+                  Wimbledon area coverage
                 </Link>
                 <Link href="/locations" className="text-teal-600 hover:text-teal-700 hover:underline font-bold col-span-2 md:col-span-3 text-center">
                   View All 50+ Areas We Serve →
