@@ -331,7 +331,7 @@ export default function DisabledAssistedBathrooms() {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h3 className="font-playfair text-2xl font-bold mb-6 text-center">Related Bathroom Guides</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Link href="/services/wet-room-installations" className="p-6 border border-gray-200 rounded-lg hover:border-teal-600 hover:shadow-lg transition-all bg-white">
                   <h4 className="font-bold text-lg mb-2">How We Install Wet Rooms</h4>
                   <p className="text-gray-600 text-sm">Waterproofing and drainage process explained</p>
@@ -339,6 +339,10 @@ export default function DisabledAssistedBathrooms() {
                 <Link href="/services/full-bathroom-renovations" className="p-6 border border-gray-200 rounded-lg hover:border-teal-600 hover:shadow-lg transition-all bg-white">
                   <h4 className="font-bold text-lg mb-2">How We Renovate Bathrooms</h4>
                   <p className="text-gray-600 text-sm">Complete renovation process guide</p>
+                </Link>
+                <Link href="/services/luxury-tiling-services" className="p-6 border border-gray-200 rounded-lg hover:border-teal-600 hover:shadow-lg transition-all bg-white">
+                  <h4 className="font-bold text-lg mb-2">Our Tiling Techniques</h4>
+                  <p className="text-gray-600 text-sm">Learn about precision tiling and materials</p>
                 </Link>
               </div>
             </div>

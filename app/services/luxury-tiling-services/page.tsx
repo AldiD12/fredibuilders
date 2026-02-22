@@ -235,7 +235,7 @@ export default function LuxuryTilingServices() {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h3 className="font-playfair text-2xl font-bold mb-6 text-center">Learn About Our Other Services</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Link href="/services/full-bathroom-renovations" className="p-6 border border-gray-200 rounded-lg hover:border-teal-600 hover:shadow-lg transition-all">
                   <h4 className="font-bold text-lg mb-2">Our Bathroom Renovation Process</h4>
                   <p className="text-gray-600 text-sm">See how we handle complete bathroom transformations</p>
@@ -243,6 +243,10 @@ export default function LuxuryTilingServices() {
                 <Link href="/services/wet-room-installations" className="p-6 border border-gray-200 rounded-lg hover:border-teal-600 hover:shadow-lg transition-all">
                   <h4 className="font-bold text-lg mb-2">How We Install Wet Rooms</h4>
                   <p className="text-gray-600 text-sm">Learn about our waterproofing and drainage approach</p>
+                </Link>
+                <Link href="/services/structural-building-repairs" className="p-6 border border-gray-200 rounded-lg hover:border-teal-600 hover:shadow-lg transition-all">
+                  <h4 className="font-bold text-lg mb-2">Structural Alterations Guide</h4>
+                  <p className="text-gray-600 text-sm">Understanding RSJ beams and knock-throughs</p>
                 </Link>
               </div>
             </div>
