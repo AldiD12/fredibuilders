@@ -44,6 +44,13 @@ export default function RootLayout({
     <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
       <head>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+        {/* Preload hero image for LCP optimization */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/luxury-marble-bathroom-walk-in-shower.webp"
+          type="image/webp"
+        />
       </head>
       <body className="font-sans">
         {children}
