@@ -230,18 +230,6 @@ export default function LuxuryTilingServices() {
             </div>
           </div>
         </section>
-                  <p className="text-xs text-gray-500 mt-1">SW19 • South West London</p>
-                </Link>
-                <Link href="/locations" className="p-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-all flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="material-icons-outlined text-3xl mb-2">map</span>
-                    <h3 className="font-bold text-base">View All 18 Areas</h3>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-6">
