@@ -374,7 +374,7 @@ export default function Home() {
               className="group relative h-80 md:h-[500px] overflow-hidden rounded-lg cursor-pointer block"
             >
               <img
-                alt="Marble Wet Room - Esher"
+                alt="Luxury marble wet room installation completed in Esher near Sandown Park Racecourse - Premium bathroom renovation by Fredi Builders"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 src="/images/grey-marble-tiled-bathroom-vanity.webp"
               />
@@ -391,7 +391,7 @@ export default function Home() {
                 className="group relative h-80 md:h-[242px] overflow-hidden rounded-lg cursor-pointer block"
               >
                 <img
-                  alt="Victorian Renovation - Streatham"
+                  alt="Victorian bathroom renovation project completed in Streatham near Streatham Common - Period features with modern fixtures by Fredi Builders"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   src="/images/white-tiled-family-bathroom-refurbishment.webp"
                 />
@@ -408,7 +408,7 @@ export default function Home() {
                   className="group relative h-48 md:h-[242px] overflow-hidden rounded-lg cursor-pointer block"
                 >
                   <img
-                    alt="Modern Minimalist - Croydon"
+                    alt="Modern minimalist bathroom renovation with walk-in shower completed in Croydon - Contemporary design by Fredi Builders"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     src="/images/modern-bathroom-shower-installation.webp"
                   />
@@ -423,7 +423,7 @@ export default function Home() {
                   className="group relative h-48 md:h-[242px] overflow-hidden rounded-lg cursor-pointer block"
                 >
                   <img
-                    alt="The Shell Stage"
+                    alt="Structural building repairs and flat roof extension construction in South London - Expert building work by Fredi Builders"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     src="/images/grp-fiberglass-flat-roof-laying.webp"
                   />

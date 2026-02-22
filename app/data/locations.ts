@@ -20,6 +20,7 @@ export interface Location {
     year: number
   }[]
   lsiKeywords: string[] // bathroom-specific vocabulary
+  projectImage?: string // Location-specific project image for schema
 }
 
 export const locations: Location[] = [
@@ -42,7 +43,8 @@ export const locations: Location[] = [
       { description: 'Complete master ensuite renovation with marble tiling and bespoke vanity unit on Portsmouth Road', year: 2024 },
       { description: 'Luxury wet room installation with rainfall shower and heated towel rails near Claremont Gardens', year: 2023 }
     ],
-    lsiKeywords: ['walk-in shower', 'underfloor heating', 'marble tiles', 'rainfall shower', 'freestanding bath', 'heated towel rail', 'vanity unit', 'wet room tanking']
+    lsiKeywords: ['walk-in shower', 'underfloor heating', 'marble tiles', 'rainfall shower', 'freestanding bath', 'heated towel rail', 'vanity unit', 'wet room tanking'],
+    projectImage: '/images/grey-marble-tiled-bathroom-vanity.webp'
   },
   {
     slug: 'luxury-bathrooms-cobham-kt11',
@@ -62,7 +64,8 @@ export const locations: Location[] = [
       { description: 'Bespoke marble bathroom with underfloor heating and smart lighting on Downside Bridge Road', year: 2024 },
       { description: 'Period property bathroom restoration with Victorian-style fixtures near Painshill Park', year: 2023 }
     ],
-    lsiKeywords: ['marble tiling', 'natural stone', 'bespoke joinery', 'smart lighting', 'thermostatic shower', 'wall-hung toilet', 'chrome fixtures', 'porcelain tiles']
+    lsiKeywords: ['marble tiling', 'natural stone', 'bespoke joinery', 'smart lighting', 'thermostatic shower', 'wall-hung toilet', 'chrome fixtures', 'porcelain tiles'],
+    projectImage: '/images/luxury-marble-bathroom-walk-in-shower.webp'
   },
   {
     slug: 'bathroom-renovations-weybridge-kt13',
@@ -164,7 +167,8 @@ export const locations: Location[] = [
       { description: 'Victorian terrace bathroom with period roll-top bath and metro tiles on Leigham Court Road', year: 2024 },
       { description: 'Complete bathroom renovation with structural alterations near Streatham Common', year: 2023 }
     ],
-    lsiKeywords: ['Victorian sanitaryware', 'metro tiles', 'roll-top bath', 'thermostatic shower', 'chimney breast removal', 'RSJ installation', 'soil stack', 'period features']
+    lsiKeywords: ['Victorian sanitaryware', 'metro tiles', 'roll-top bath', 'thermostatic shower', 'chimney breast removal', 'RSJ installation', 'soil stack', 'period features'],
+    projectImage: '/images/white-tiled-family-bathroom-refurbishment.webp'
   },
   {
     slug: 'bathroom-renovations-balham-sw12',
@@ -246,7 +250,8 @@ export const locations: Location[] = [
       { description: 'Listed building bathroom restoration with period features and modern heating on Court Lane', year: 2024 },
       { description: 'Luxury master ensuite with marble and steam shower near Dulwich Park', year: 2023 }
     ],
-    lsiKeywords: ['listed building', 'conservation area', 'period restoration', 'marble bathroom', 'limestone tiles', 'steam shower', 'chromotherapy', 'bespoke design']
+    lsiKeywords: ['listed building', 'conservation area', 'period restoration', 'marble bathroom', 'limestone tiles', 'steam shower', 'chromotherapy', 'bespoke design'],
+    projectImage: '/images/modern-bathroom-renovation-white-vanity-unit.webp'
   },
   {
     slug: 'bathroom-renovations-east-dulwich-se22',

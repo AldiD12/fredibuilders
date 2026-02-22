@@ -6,6 +6,11 @@ interface LocationSchemaProps {
 }
 
 export default function LocationSchema({ location, url }: LocationSchemaProps) {
+  const baseUrl = 'https://fredibuilders.co.uk'
+  const imageUrl = location.projectImage 
+    ? `${baseUrl}${location.projectImage}`
+    : `${baseUrl}/images/luxury-marble-bathroom-walk-in-shower.webp`
+
   const schema = [
     // LocalBusiness Schema
     {
@@ -13,7 +18,7 @@ export default function LocationSchema({ location, url }: LocationSchemaProps) {
       '@type': 'LocalBusiness',
       '@id': url,
       name: `Fredi Builders ${location.name}`,
-      image: 'https://fredibuilders.co.uk/og-image.jpg',
+      image: imageUrl,
       description: location.description,
       url: url,
       telephone: '+447468451511',
