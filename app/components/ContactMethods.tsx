@@ -48,10 +48,10 @@ export default function ContactMethods() {
           Get a detailed written response
         </p>
         <a
-          href="mailto:info@fredibuilders.co.uk"
+          href="mailto:fredibuilder18@icloud.com"
           className="text-teal-600 font-semibold hover:underline"
         >
-          info@fredibuilders.co.uk
+          fredibuilder18@icloud.com
         </a>
       </div>
     </div>

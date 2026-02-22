@@ -2,7 +2,7 @@
 
 /**
  * Server Action for submitting lead form data
- * Validates data and sends email to info@fredibuilders.co.uk
+ * Validates data and sends email to fredibuilder18@icloud.com
  */
 
 interface LeadFormData {
@@ -140,7 +140,7 @@ Submitted: ${new Date().toISOString()}
     // TODO: Implement actual email sending
     // Example with a hypothetical email service:
     // await emailService.send({
-    //   to: 'info@fredibuilders.co.uk',
+    //   to: 'fredibuilder18@icloud.com',
     //   subject: `New ${sanitizedData.service} Lead - ${sanitizedData.postcode}`,
     //   text: emailContent,
     //   attachments: photoFiles

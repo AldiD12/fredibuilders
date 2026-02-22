@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     console.log('Lead submission received:', leadData)
 
     // In production, you would:
-    // 1. Send email to info@fredibuilders.co.uk
+    // 1. Send email to fredibuilder18@icloud.com
     // 2. Store in database
     // 3. Send confirmation email to customer
     // 4. Integrate with CRM
