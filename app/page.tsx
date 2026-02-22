@@ -175,7 +175,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
               <p>Fredi Builders represents a legacy of craftsmanship. With over 15 years of experience serving homeowners across South London and Surrey, we have established a reputation for reliability, precision, and architectural excellence.</p>
-              <p>Specializing in luxury bathroom installations and complex structural knock-throughs, our team handles every aspect of the build. From the initial removal of old fixtures to the final polish of marble tiles, &apos;The Standard&apos; is not just a slogan—it is our guarantee.</p>
+              <p>Specializing in <Link href="/services/full-bathroom-renovations" className="text-primary hover:underline font-medium">luxury bathroom installations</Link> and <Link href="/services/structural-building-repairs" className="text-primary hover:underline font-medium">complex structural knock-throughs</Link>, our team handles every aspect of the build. From the initial removal of old fixtures to the final polish of marble tiles with our <Link href="/services/luxury-tiling-services" className="text-primary hover:underline font-medium">expert tiling services</Link>, &apos;The Standard&apos; is not just a slogan—it is our guarantee.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/10 p-2 rounded-full text-primary">
