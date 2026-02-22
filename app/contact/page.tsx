@@ -84,6 +84,41 @@ export default function Contact() {
           <ContactMethods />
         </div>
 
+        {/* Google Maps Embed - GMB Entity Link */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <h2 className="text-2xl font-serif font-bold text-center text-slate-900 mb-8">
+            Visit Our Office
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="aspect-video w-full rounded-lg overflow-hidden">
+              {/* TODO: Replace with actual GMB embed code from Google Maps "Share > Embed a Map" */}
+              {/* This links the Entity ID for local SEO */}
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.0!2d-0.1003!3d51.3989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDIzJzU2LjAiTiAwwrAwNicwMS4xIlc!5e0!3m2!1sen!2suk!4v1234567890"
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Fredi Builders Location - 71 Lyndhurst Road, Thornton Heath, Croydon CR7 7PZ"
+              />
+            </div>
+            <div className="mt-4 text-center">
+              <p className="text-slate-700 font-semibold">71 Lyndhurst Road, Thornton Heath</p>
+              <p className="text-slate-600">Croydon, CR7 7PZ</p>
+              <a 
+                href="https://maps.google.com/?q=71+Lyndhurst+Road+Thornton+Heath+CR7+7PZ" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-teal-600 hover:text-teal-700 font-semibold"
+              >
+                Get Directions →
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Trust Signals */}
         <div className="mt-12 text-center">
           <p className="text-slate-600">

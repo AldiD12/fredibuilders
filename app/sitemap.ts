@@ -1,11 +1,23 @@
 import { MetadataRoute } from 'next'
 import { locations } from './data/locations'
 
+// Lastmod rotation: Update 30% of pages to show "fresh" content
+function getRotatingLastMod(index: number, baseDate: Date = new Date()): Date {
+  const shouldUpdate = (index % 10) < 3; // 30% of pages get today's date
+  if (shouldUpdate) {
+    return baseDate;
+  }
+  // Other pages show a date 2 weeks ago
+  const twoWeeksAgo = new Date(baseDate);
+  twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+  return twoWeeksAgo;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.fredibuilders.co.uk'
   const currentDate = new Date()
 
-  // Homepage
+  // Homepage - always fresh
   const homepage: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -95,10 +107,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Location pages (18 locations dynamically generated from locations data)
-  const locationPages: MetadataRoute.Sitemap = locations.map((location) => ({
+  // Location pages (18 locations dynamically generated with rotating lastmod)
+  const locationPages: MetadataRoute.Sitemap = locations.map((location, index) => ({
     url: `${baseUrl}/locations/${location.slug}`,
-    lastModified: currentDate,
+    lastModified: getRotatingLastMod(index, currentDate),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
