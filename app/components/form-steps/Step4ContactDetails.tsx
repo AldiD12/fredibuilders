@@ -40,8 +40,11 @@ export default function Step4ContactDetails({
             className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 ${
               errors.name ? 'border-red-500' : 'border-slate-300'
             }`}
+            aria-required="true"
+            aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? 'name-error' : undefined}
           />
-          {errors.name && <p className="mt-1 text-red-600 text-sm">{errors.name}</p>}
+          {errors.name && <p id="name-error" className="mt-1 text-red-600 text-sm" role="alert">{errors.name}</p>}
         </div>
 
         <div>
@@ -57,8 +60,11 @@ export default function Step4ContactDetails({
             className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 ${
               errors.phone ? 'border-red-500' : 'border-slate-300'
             }`}
+            aria-required="true"
+            aria-invalid={!!errors.phone}
+            aria-describedby={errors.phone ? 'phone-error' : undefined}
           />
-          {errors.phone && <p className="mt-1 text-red-600 text-sm">{errors.phone}</p>}
+          {errors.phone && <p id="phone-error" className="mt-1 text-red-600 text-sm" role="alert">{errors.phone}</p>}
         </div>
 
         <div>
@@ -74,8 +80,11 @@ export default function Step4ContactDetails({
             className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 ${
               errors.email ? 'border-red-500' : 'border-slate-300'
             }`}
+            aria-required="true"
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? 'email-error' : undefined}
           />
-          {errors.email && <p className="mt-1 text-red-600 text-sm">{errors.email}</p>}
+          {errors.email && <p id="email-error" className="mt-1 text-red-600 text-sm" role="alert">{errors.email}</p>}
         </div>
       </div>
 

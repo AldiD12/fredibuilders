@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { locations, getLocationBySlug } from '@/app/data/locations'
 import { notFound } from 'next/navigation'
 import LocationSchema from '@/app/components/LocationSchema'
+import FAQPageSchema from '@/app/components/schemas/FAQPageSchema'
 import Breadcrumb from '@/app/components/Breadcrumb'
 import FAQAccordion from '@/app/components/FAQAccordion'
 import NearbyLocations from '@/app/components/NearbyLocations'
@@ -84,6 +85,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <LocationSchema location={location} url={url} />
+      <FAQPageSchema locationName={location.name} postcode={location.postcode} />
       <LocationPageTracker locationName={location.name} />
       <Navigation />
       
@@ -144,6 +146,34 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                 <span className="font-bold">15+</span>
                 <span className="text-gray-600 dark:text-gray-400 text-xs md:text-sm">Years Experience</span>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Condensed Pain & Agitation - Address Client Concerns */}
+        <section className="py-8 md:py-12 bg-slate-50 dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 mb-6">
+                Most homeowners in <span className="font-bold text-gray-900 dark:text-white">{location.name}</span> worry about dust damaging expensive furnishings, projects dragging on for weeks, and hidden costs appearing at the end.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 p-3 rounded-lg">
+                  <span className="material-icons-outlined text-primary text-lg">cleaning_services</span>
+                  <span className="font-medium text-gray-900 dark:text-white">Dust-Free Systems</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 p-3 rounded-lg">
+                  <span className="material-icons-outlined text-primary text-lg">schedule</span>
+                  <span className="font-medium text-gray-900 dark:text-white">Fixed Timelines</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 p-3 rounded-lg">
+                  <span className="material-icons-outlined text-primary text-lg">payments</span>
+                  <span className="font-medium text-gray-900 dark:text-white">No Hidden Costs</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                The price we quote is exactly what you pay. No surprises.
+              </p>
             </div>
           </div>
         </section>

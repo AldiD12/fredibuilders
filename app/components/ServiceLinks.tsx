@@ -79,6 +79,18 @@ export default function ServiceLinks({ location }: ServiceLinksProps) {
 
   const services = getRelevantServices()
 
+  // Broad anchor text mapping (non-competing with Hub keywords)
+  const getAnchorText = (slug: string): string => {
+    const anchorMap: Record<string, string> = {
+      'full-bathroom-renovations': 'Read our renovation process guide',
+      'wet-room-installations': 'See how we install wet rooms',
+      'luxury-tiling-services': 'Learn about our tiling approach',
+      'disabled-assisted-bathrooms': 'Understand our accessibility process',
+      'structural-building-repairs': 'Discover our structural work method'
+    }
+    return anchorMap[slug] || 'Learn more about this service'
+  }
+
   return (
     <section className="py-12 bg-slate-50">
       <div className="container mx-auto px-4">
@@ -97,7 +109,7 @@ export default function ServiceLinks({ location }: ServiceLinksProps) {
               </h3>
               <p className="text-slate-600 text-sm mb-4">{service.description}</p>
               <span className="text-teal-600 text-sm font-medium group-hover:underline">
-                Learn more →
+                {getAnchorText(service.slug)} →
               </span>
             </Link>
           ))}

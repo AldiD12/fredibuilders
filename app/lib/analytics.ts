@@ -22,15 +22,28 @@ export function trackEvent(event: AnalyticsEvent, properties?: EventProperties) 
 }
 
 export function trackWhatsAppClick(context: string) {
-  trackEvent('click_whatsapp', { context })
+  trackEvent('click_whatsapp', { 
+    context,
+    value: 500, // Estimated lead value in GBP
+    currency: 'GBP'
+  })
 }
 
 export function trackCallClick(context: string) {
-  trackEvent('click_call', { context })
+  trackEvent('click_call', { 
+    context,
+    value: 750, // Phone leads typically higher intent
+    currency: 'GBP'
+  })
 }
 
 export function trackFormSubmit(service: string, hasPhotos: boolean) {
-  trackEvent('form_submit', { service, has_photos: hasPhotos })
+  trackEvent('form_submit', { 
+    service,
+    has_photos: hasPhotos,
+    value: hasPhotos ? 1000 : 600, // Photos indicate higher intent
+    currency: 'GBP'
+  })
 }
 
 export function trackGalleryView(category?: string) {

@@ -227,6 +227,7 @@ export default function MultiStepForm() {
             <button
               onClick={handleBack}
               className="px-6 py-3 border-2 border-slate-300 text-slate-700 font-semibold rounded-lg hover:border-slate-400 transition-colors"
+              aria-label="Go back to previous step"
             >
               Back
             </button>
@@ -236,6 +237,7 @@ export default function MultiStepForm() {
             <button
               onClick={handleNext}
               className="ml-auto px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors"
+              aria-label={`Continue to step ${currentStep + 1} of ${totalSteps}`}
             >
               Next
             </button>
@@ -244,6 +246,7 @@ export default function MultiStepForm() {
               onClick={handleSubmit}
               disabled={isSubmitting}
               className="ml-auto px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label="Submit bathroom renovation quote request"
             >
               {isSubmitting ? 'Submitting...' : 'Get My Quote'}
             </button>

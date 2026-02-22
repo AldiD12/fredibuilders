@@ -44,12 +44,12 @@ export default function Home() {
               Bespoke Bathrooms &amp; Structural Alterations. From Victorian Terrace renovations in Streatham to Luxury Wet Rooms in Esher.
             </p>
             <div className="flex flex-col items-start gap-4 mb-16">
-              <button className="bg-primary hover:bg-primary-hover text-gray-900 font-bold py-5 px-10 rounded shadow-2xl transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center gap-2 text-lg">
+              <button className="bg-primary hover:bg-primary-hover text-gray-900 font-bold py-5 px-10 rounded shadow-2xl transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center gap-2 text-lg" aria-label="Get a fixed-price bathroom renovation quote">
                 <span className="material-icons-outlined">calendar_today</span>
                 Get a Fixed-Price Quote
               </button>
               <p className="text-white/90 text-base font-normal">
-                or call our project manager on <a href="tel:07468451511" className="font-bold hover:text-primary transition-colors underline decoration-primary/50">07468 451511</a>
+                or call our project manager on <a href="tel:07468451511" className="font-bold hover:text-primary transition-colors underline decoration-primary/50" aria-label="Call Fredi Builders on 07468 451511">07468 451511</a>
               </p>
             </div>
           </div>
@@ -91,6 +91,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pain & Agitation Section - Address Client Fears */}
+      <section className="py-20 md:py-28 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                Tired of Unreliable Tradesmen in Surrey &amp; South London?
+              </h2>
+              <div className="h-1 w-24 bg-primary mx-auto mb-8"></div>
+            </div>
+            
+            <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300 leading-relaxed space-y-6">
+              <p className="text-xl text-center mb-8">
+                Inviting contractors into your home shouldn't be stressful. Most homeowners in Surrey and South London worry about three things:
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-8 my-12">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="material-icons-outlined text-red-600 dark:text-red-400 text-3xl">cleaning_services</span>
+                  </div>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">Dust &amp; Mess</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Dust damaging expensive furnishings and spreading throughout the house</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="material-icons-outlined text-red-600 dark:text-red-400 text-3xl">schedule</span>
+                  </div>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">Delays</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Projects dragging on for weeks with no clear completion date</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="material-icons-outlined text-red-600 dark:text-red-400 text-3xl">payments</span>
+                  </div>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">Hidden Costs</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">The dreaded "extra costs" appearing at the end of the job</p>
+                </div>
+              </div>
+              
+              <div className="bg-slate-50 dark:bg-slate-900 border-l-4 border-primary p-8 rounded-r-lg">
+                <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  At Fredi Builders, we operate differently.
+                </h3>
+                <div className="space-y-4 text-gray-700 dark:text-gray-300">
+                  <div className="flex items-start gap-3">
+                    <span className="material-icons-outlined text-primary text-xl mt-1">check_circle</span>
+                    <p><strong>Industrial-grade dust extraction systems</strong> keep your home clean. We seal off work areas with heavy-duty plastic sheeting and vacuum at the end of each day.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="material-icons-outlined text-primary text-xl mt-1">check_circle</span>
+                    <p><strong>Fixed timelines with daily progress updates.</strong> We provide a strict schedule in our quote and stay on your project every day until it's 100% complete. We don't juggle multiple jobs.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="material-icons-outlined text-primary text-xl mt-1">check_circle</span>
+                    <p><strong>The fixed price we quote is exactly what you pay.</strong> No surprises, no hidden extras, no excuses. Every cost is itemized upfront in our detailed quotation.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <p className="text-center text-lg font-medium text-gray-900 dark:text-white pt-6">
+                We protect every surface with heavy-duty sheeting, arrive punctually at 8:00 AM, and treat your home with the same respect we'd treat our own.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-20 md:py-28 bg-background-light dark:bg-background-dark">
         <div className="container mx-auto px-6">
@@ -127,7 +197,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="pt-6">
-                <button className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200 px-8 py-4 rounded font-bold transition-colors">
+                <button className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200 px-8 py-4 rounded font-bold transition-colors" aria-label="Request a fixed-price bathroom renovation quote">
                   Get a Fixed-Price Quote
                 </button>
               </div>
@@ -258,7 +328,7 @@ export default function Home() {
                   <li>• Underfloor Heating</li>
                   <li>• Custom Lighting Schemes</li>
                 </ul>
-                <Link href="/services/full-bathroom-renovations" className="inline-block w-full text-center bg-primary text-gray-900 py-2 rounded text-sm font-bold hover:bg-gray-900 hover:text-white transition-colors">
+                <Link href="/services/full-bathroom-renovations" className="inline-block w-full text-center bg-primary text-gray-900 py-2 rounded text-sm font-bold hover:bg-gray-900 hover:text-white transition-colors" aria-label="Learn more about full bathroom renovations">
                   Learn More →
                 </Link>
               </div>
@@ -285,7 +355,7 @@ export default function Home() {
                   <li>• Linear Drains</li>
                   <li>• Glass Partitions</li>
                 </ul>
-                <Link href="/services/wet-room-installations" className="inline-block w-full text-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 rounded text-sm font-medium hover:bg-primary hover:text-gray-900 hover:border-primary transition-colors">
+                <Link href="/services/wet-room-installations" className="inline-block w-full text-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 rounded text-sm font-medium hover:bg-primary hover:text-gray-900 hover:border-primary transition-colors" aria-label="Learn more about bespoke wet room installations">
                   Learn More →
                 </Link>
               </div>
@@ -312,7 +382,7 @@ export default function Home() {
                   <li>• Herringbone Patterns</li>
                   <li>• Large Format Tiles</li>
                 </ul>
-                <Link href="/services/luxury-tiling-services" className="inline-block w-full text-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 rounded text-sm font-medium hover:bg-primary hover:text-gray-900 hover:border-primary transition-colors">
+                <Link href="/services/luxury-tiling-services" className="inline-block w-full text-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 rounded text-sm font-medium hover:bg-primary hover:text-gray-900 hover:border-primary transition-colors" aria-label="Learn more about designer tiling services">
                   Learn More →
                 </Link>
               </div>
@@ -339,14 +409,14 @@ export default function Home() {
                   <li>• Building Regulation Compliance</li>
                   <li>• Plastering &amp; Making Good</li>
                 </ul>
-                <Link href="/services/structural-building-repairs" className="inline-block w-full text-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 rounded text-sm font-medium hover:bg-primary hover:text-gray-900 hover:border-primary transition-colors">
+                <Link href="/services/structural-building-repairs" className="inline-block w-full text-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 rounded text-sm font-medium hover:bg-primary hover:text-gray-900 hover:border-primary transition-colors" aria-label="Learn more about structural knock-throughs and building repairs">
                   Learn More →
                 </Link>
               </div>
             </div>
           </div>
           <div className="text-center mt-12">
-            <button className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-gray-900 font-bold py-3 px-10 rounded transition-colors uppercase tracking-widest text-xs">
+            <button className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-gray-900 font-bold py-3 px-10 rounded transition-colors uppercase tracking-widest text-xs" aria-label="View all building and renovation services">
               View All Services →
             </button>
           </div>
@@ -444,7 +514,7 @@ export default function Home() {
                 <p className="text-gray-400">Get a free, no-obligation quote today.</p>
               </div>
               <div className="flex gap-4">
-                <button className="bg-primary text-gray-900 px-6 py-3 rounded font-bold hover:bg-white transition-colors">
+                <button className="bg-primary text-gray-900 px-6 py-3 rounded font-bold hover:bg-white transition-colors" aria-label="Get a fixed-price quote for your bathroom project">
                   Get a Fixed-Price Quote
                 </button>
               </div>
@@ -475,7 +545,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Streatham</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">SW16 • South London</span>
                 </div>
-                <Link href="/locations/bathroom-fitters-streatham-sw16" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/bathroom-fitters-streatham-sw16" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0" aria-label="View bathroom fitters in Streatham SW16">
                   View
                 </Link>
               </div>
@@ -487,7 +557,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Esher</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">KT10 • Surrey</span>
                 </div>
-                <Link href="/locations/bathroom-fitters-esher-kt10" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/bathroom-fitters-esher-kt10" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0" aria-label="View bathroom fitters in Esher KT10">
                   View
                 </Link>
               </div>
@@ -499,7 +569,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Cobham</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">KT11 • Surrey</span>
                 </div>
-                <Link href="/locations/luxury-bathrooms-cobham-kt11" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/luxury-bathrooms-cobham-kt11" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0" aria-label="View luxury bathroom fitters in Cobham KT11">
                   View
                 </Link>
               </div>
@@ -511,7 +581,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Wimbledon</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">SW19 • South West</span>
                 </div>
-                <Link href="/locations/bathroom-fitters-wimbledon-sw19" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/bathroom-fitters-wimbledon-sw19" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0" aria-label="View bathroom fitters in Wimbledon SW19">
                   View
                 </Link>
               </div>
@@ -523,7 +593,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Kingston</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">KT1 • Surrey</span>
                 </div>
-                <Link href="/locations/bathroom-fitters-kingston-kt1" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/bathroom-fitters-kingston-kt1" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0" aria-label="View bathroom fitters in Kingston KT1">
                   View
                 </Link>
               </div>
@@ -535,7 +605,7 @@ export default function Home() {
                   <span className="block font-bold text-slate-900 text-sm md:text-lg truncate">Builders in Dulwich</span>
                   <span className="text-[10px] md:text-xs text-gray-500 font-mono">SE21 • South East</span>
                 </div>
-                <Link href="/locations/luxury-bathrooms-dulwich-se21" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0">
+                <Link href="/locations/luxury-bathrooms-dulwich-se21" className="border border-slate-200 text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-slate-600 px-2 md:px-3 py-1 md:py-1.5 hover:bg-slate-900 hover:text-white transition-colors flex-shrink-0" aria-label="View luxury bathroom fitters in Dulwich SE21">
                   View
                 </Link>
               </div>

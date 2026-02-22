@@ -45,6 +45,8 @@ export default function Step1ServiceSelection({ value, onChange, error }: Step1P
                 ? 'border-teal-600 bg-teal-50'
                 : 'border-slate-200 hover:border-slate-300'
             }`}
+            aria-label={`Select ${service.title}`}
+            aria-pressed={value === service.value}
           >
             <span
               className={`material-icons-outlined text-4xl mb-3 block ${

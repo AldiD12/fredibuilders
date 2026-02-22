@@ -14,6 +14,7 @@ export default function PhoneLink({ context, className, children }: PhoneLinkPro
       href="tel:+447468451511"
       onClick={() => trackCallClick(context)}
       className={className}
+      aria-label="Call Fredi Builders on 07468 451511"
     >
       {children}
     </a>

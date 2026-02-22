@@ -48,6 +48,9 @@ export default function Step3PhotoUpload({ photos, onChange, errors }: Step3Prop
         onDragOver={handleDragOver}
         onClick={() => fileInputRef.current?.click()}
         className="border-2 border-dashed border-slate-300 rounded-lg p-8 text-center cursor-pointer hover:border-teal-500 transition-colors"
+        role="button"
+        aria-label="Upload photos of your bathroom or project area"
+        tabIndex={0}
       >
         <span className="material-icons-outlined text-slate-400 text-5xl mb-4 block">
           cloud_upload
@@ -65,6 +68,7 @@ export default function Step3PhotoUpload({ photos, onChange, errors }: Step3Prop
           accept="image/jpeg,image/png,image/webp"
           onChange={handleFileChange}
           className="hidden"
+          aria-label="Choose photos to upload"
         />
       </div>
 
@@ -89,6 +93,7 @@ export default function Step3PhotoUpload({ photos, onChange, errors }: Step3Prop
                     handleRemovePhoto(index)
                   }}
                   className="absolute top-2 right-2 p-1 bg-red-600 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  aria-label={`Remove photo ${photo.name}`}
                 >
                   <span className="material-icons-outlined text-sm">close</span>
                 </button>
