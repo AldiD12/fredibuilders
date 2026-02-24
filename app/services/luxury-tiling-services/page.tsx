@@ -19,6 +19,7 @@ export default function LuxuryTilingServices() {
     <>
       <ServiceSchema
         serviceName="Luxury Tiling Services"
+        gmbServiceName="Large Format Porcelain Tiling"
         serviceDescription="Expert installation of marble, porcelain, and designer tiles. Precision tiling with laser-level accuracy for bathrooms, wet rooms, and feature walls."
         serviceUrl="https://fredibuilders.co.uk/services/luxury-tiling-services"
         serviceType="HomeAndConstructionBusiness"

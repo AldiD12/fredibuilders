@@ -19,6 +19,7 @@ export default function DisabledAssistedBathrooms() {
     <>
       <ServiceSchema
         serviceName="Accessible & Assisted Bathrooms"
+        gmbServiceName="Walk-in Shower Construction"
         serviceDescription="Person-centered accessible bathroom design and installation. Wet rooms, walk-in showers, grab rails, and mobility solutions with DFG grant support."
         serviceUrl="https://fredibuilders.co.uk/services/disabled-assisted-bathrooms"
         serviceType="HomeAndConstructionBusiness"

@@ -65,6 +65,68 @@ export default function LocationSchema({ location, url }: LocationSchemaProps) {
           opens: '09:00',
           closes: '14:00'
         }
+      ],
+      makesOffer: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Bespoke Bathroom Renovations',
+            description: 'Complete bathroom transformations from concept to completion',
+            areaServed: {
+              '@type': 'City',
+              name: location.name
+            }
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Luxury Wet Room Installation',
+            description: 'Modern wet rooms with waterproof tanking and minimal access',
+            areaServed: {
+              '@type': 'City',
+              name: location.name
+            }
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Walk-in Shower Construction',
+            description: 'Accessible bathroom solutions with safety and dignity',
+            areaServed: {
+              '@type': 'City',
+              name: location.name
+            }
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Large Format Porcelain Tiling',
+            description: 'Expert installation of marble, porcelain, and designer tiles',
+            areaServed: {
+              '@type': 'City',
+              name: location.name
+            }
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Structural Knock-Throughs (RSJ)',
+            description: 'RSJ steel beam installation and Building Control compliance',
+            areaServed: {
+              '@type': 'City',
+              name: location.name
+            }
+          }
+        }
       ]
     },
     // Service Schema

@@ -20,6 +20,7 @@ export default function FullBathroomRenovations() {
     <>
       <ServiceSchema
         serviceName="Full Bathroom Renovations"
+        gmbServiceName="Bespoke Bathroom Renovations"
         serviceDescription="Complete bathroom transformations from concept to completion. Expert design, installation, and project management for luxury bathroom renovations across South London and Surrey."
         serviceUrl="https://fredibuilders.co.uk/services/full-bathroom-renovations"
         serviceType="HomeAndConstructionBusiness"

@@ -2,6 +2,7 @@ interface ServiceSchemaProps {
   serviceName: string
   serviceDescription: string
   serviceUrl: string
+  gmbServiceName: string // GMB-aligned service name
   serviceType?: string
 }
 
@@ -9,12 +10,13 @@ export default function ServiceSchema({
   serviceName,
   serviceDescription,
   serviceUrl,
+  gmbServiceName,
   serviceType = 'HomeAndConstructionBusiness'
 }: ServiceSchemaProps) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: serviceName,
+    name: gmbServiceName, // Use GMB name for schema
     description: serviceDescription,
     url: serviceUrl,
     serviceType: serviceType,

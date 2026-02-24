@@ -19,6 +19,7 @@ export default function StructuralBuildingRepairs() {
     <>
       <ServiceSchema
         serviceName="Structural Building Repairs"
+        gmbServiceName="Structural Knock-Throughs (RSJ)"
         serviceDescription="RSJ steel beam installation and Building Control compliance. Expert structural alterations, knock-throughs, and load-bearing wall removal."
         serviceUrl="https://fredibuilders.co.uk/services/structural-building-repairs"
         serviceType="HomeAndConstructionBusiness"

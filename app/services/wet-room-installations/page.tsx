@@ -19,6 +19,7 @@ export default function WetRoomInstallations() {
     <>
       <ServiceSchema
         serviceName="Wet Room Installations"
+        gmbServiceName="Luxury Wet Room Installation"
         serviceDescription="Modern wet rooms with waterproof tanking and minimal access. Expert installation of level-access showers with proper drainage and waterproofing systems."
         serviceUrl="https://fredibuilders.co.uk/services/wet-room-installations"
         serviceType="HomeAndConstructionBusiness"
