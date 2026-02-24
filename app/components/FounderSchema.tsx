@@ -37,9 +37,10 @@ export default function FounderSchema({ includeInPage = true }: FounderSchemaPro
     ],
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '71 Lyndhurst Road',
       addressLocality: 'Thornton Heath',
-      addressRegion: 'Surrey',
-      postalCode: 'CR7',
+      addressRegion: 'Greater London',
+      postalCode: 'CR7 7PZ',
       addressCountry: 'GB'
     }
   }

@@ -16,6 +16,10 @@ export default function ReviewSchema({ reviews }: ReviewSchemaProps) {
       telephone: '+447468451511',
       address: {
         '@type': 'PostalAddress',
+        streetAddress: '71 Lyndhurst Road',
+        addressLocality: 'Thornton Heath',
+        addressRegion: 'Greater London',
+        postalCode: 'CR7 7PZ',
         addressCountry: 'GB'
       }
     },

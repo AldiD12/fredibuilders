@@ -25,9 +25,10 @@ export default function LocationSchema({ location, url }: LocationSchemaProps) {
       priceRange: '££',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: location.name,
-        addressRegion: location.region,
-        postalCode: location.postcode,
+        streetAddress: '71 Lyndhurst Road',
+        addressLocality: 'Thornton Heath',
+        addressRegion: 'Greater London',
+        postalCode: 'CR7 7PZ',
         addressCountry: 'GB'
       },
       geo: {

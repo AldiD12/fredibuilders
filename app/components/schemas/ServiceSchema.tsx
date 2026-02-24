@@ -27,9 +27,10 @@ export default function ServiceSchema({
       email: 'info@fredibuilders.co.uk',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Serving South London & Surrey',
-        addressLocality: 'London',
+        streetAddress: '71 Lyndhurst Road',
+        addressLocality: 'Thornton Heath',
         addressRegion: 'Greater London',
+        postalCode: 'CR7 7PZ',
         addressCountry: 'GB'
       },
       aggregateRating: {
