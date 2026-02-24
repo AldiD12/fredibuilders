@@ -20,9 +20,9 @@ export default function ServiceSchema({
     serviceType: serviceType,
     provider: {
       '@type': 'LocalBusiness',
-      '@id': 'https://fredibuilders.co.uk/#organization',
+      '@id': 'https://www.fredibuilders.co.uk/#organization',
       name: 'Fredi Builders',
-      image: 'https://fredibuilders.co.uk/images/fredi-builders-logo.png',
+      image: 'https://www.fredibuilders.co.uk/images/logo.webp',
       telephone: '+44 7448 257 096',
       email: 'info@fredibuilders.co.uk',
       address: {
