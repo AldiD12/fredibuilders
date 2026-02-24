@@ -23,7 +23,7 @@ export default function ServiceSchema({
       '@id': 'https://www.fredibuilders.co.uk/#organization',
       name: 'Fredi Builders',
       image: 'https://www.fredibuilders.co.uk/images/logo.webp',
-      telephone: '+44 7448 257 096',
+      telephone: '+44 7468 451511',
       email: 'info@fredibuilders.co.uk',
       address: {
         '@type': 'PostalAddress',
@@ -55,7 +55,7 @@ export default function ServiceSchema({
       serviceUrl: serviceUrl,
       servicePhone: {
         '@type': 'ContactPoint',
-        telephone: '+44 7448 257 096',
+        telephone: '+44 7468 451511',
         contactType: 'customer service',
         availableLanguage: 'English'
       }
