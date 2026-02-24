@@ -1,117 +1,144 @@
-const { google } = require('googleapis');
-const fs = require('fs');
-const path = require('path');
+/**
+ * Google Indexing API - Sitemap-Driven (God-Tier Version)
+ * 
+ * This script automatically discovers ALL pages from your sitemap and submits them to Google.
+ * Zero maintenance required - add new pages to your site, they appear in sitemap, script finds them.
+ * 
+ * Benefits:
+ * - Automatic discovery of new pages
+ * - Single authorization (faster)
+ * - Error resilient
+ * - No hardcoded URLs
+ * 
+ * Usage: node scripts/google-indexing.js
+ */
 
-// Load service account key
-const keyPath = path.join(__dirname, 'service-account-key.json');
+const { google } = require('googleapis')
+const path = require('path')
+const axios = require('axios')
+const { parseStringPromise } = require('xml2js')
 
-if (!fs.existsSync(keyPath)) {
-  console.error('❌ Error: service-account-key.json not found!');
-  console.error('Please follow the setup guide in docs/GOOGLE_INDEXING_API_SETUP.md');
-  process.exit(1);
+// Configuration
+const SITEMAP_URL = 'https://www.fredibuilders.co.uk/sitemap.xml'
+const KEY_PATH = path.join(__dirname, 'service-account-key.json')
+const DELAY_MS = 1000 // 1 second between requests to avoid rate limiting
+
+/**
+ * Fetch and parse sitemap to extract all URLs
+ */
+async function getUrlsFromSitemap() {
+  try {
+    console.log(`📡 Fetching sitemap from ${SITEMAP_URL}...`)
+    const response = await axios.get(SITEMAP_URL)
+    const parsed = await parseStringPromise(response.data)
+    
+    if (!parsed.urlset || !parsed.urlset.url) {
+      console.error('❌ Invalid sitemap format')
+      return []
+    }
+    
+    const urls = parsed.urlset.url.map(u => u.loc[0])
+    console.log(`✅ Found ${urls.length} URLs in sitemap\n`)
+    return urls
+  } catch (error) {
+    console.error('❌ Could not fetch sitemap:', error.message)
+    return []
+  }
 }
 
-const key = require(keyPath);
-
-// Your site URLs to index
-const BASE_URL = 'https://fredibuilders.co.uk';
-
-const urls = [
-  // Homepage
-  BASE_URL,
-  
-  // Main pages
-  `${BASE_URL}/about`,
-  `${BASE_URL}/contact`,
-  `${BASE_URL}/gallery`,
-  `${BASE_URL}/reviews`,
-  `${BASE_URL}/blog`,
-  
-  // Service pages
-  `${BASE_URL}/services`,
-  `${BASE_URL}/services/full-bathroom-renovations`,
-  `${BASE_URL}/services/wet-room-installations`,
-  `${BASE_URL}/services/luxury-tiling-services`,
-  `${BASE_URL}/services/disabled-assisted-bathrooms`,
-  `${BASE_URL}/services/structural-building-repairs`,
-  
-  // Location pages (18 locations)
-  `${BASE_URL}/locations`,
-  `${BASE_URL}/locations/bathroom-fitters-esher-kt10`,
-  `${BASE_URL}/locations/luxury-bathrooms-cobham-kt11`,
-  `${BASE_URL}/locations/bathroom-renovations-weybridge-kt13`,
-  `${BASE_URL}/locations/bathroom-fitters-kingston-kt1`,
-  `${BASE_URL}/locations/builders-leatherhead-kt22`,
-  `${BASE_URL}/locations/bathroom-fitters-wimbledon-sw19`,
-  `${BASE_URL}/locations/bathroom-fitters-streatham-sw16`,
-  `${BASE_URL}/locations/bathroom-renovations-balham-sw12`,
-  `${BASE_URL}/locations/bathroom-specialists-raynes-park-sw20`,
-  `${BASE_URL}/locations/bathroom-fitters-putney-sw15`,
-  `${BASE_URL}/locations/luxury-bathrooms-dulwich-se21`,
-  `${BASE_URL}/locations/bathroom-renovations-east-dulwich-se22`,
-  `${BASE_URL}/locations/bathroom-fitters-crystal-palace-se19`,
-  `${BASE_URL}/locations/bathroom-specialists-west-norwood-se27`,
-  `${BASE_URL}/locations/bathroom-renovations-croydon-cr0`,
-  `${BASE_URL}/locations/bathroom-specialists-thornton-heath-cr7`,
-  `${BASE_URL}/locations/bathroom-fitters-sutton-sm1`,
-  `${BASE_URL}/locations/bathroom-renovations-purley-cr8`,
-];
-
-async function indexURL(url) {
+/**
+ * Submit a single URL to Google Indexing API
+ */
+async function indexUrl(indexing, url) {
   try {
-    // Create JWT client with credentials
-    const jwtClient = new google.auth.JWT({
-      email: key.client_email,
-      key: key.private_key,
-      scopes: ['https://www.googleapis.com/auth/indexing']
-    });
-
-    // Authorize
-    await jwtClient.authorize();
-
-    // Create indexing service
-    const indexing = google.indexing({ version: 'v3', auth: jwtClient });
-
-    // Submit URL for indexing
-    const response = await indexing.urlNotifications.publish({
+    await indexing.urlNotifications.publish({
       requestBody: {
         url: url,
         type: 'URL_UPDATED'
       }
-    });
-
-    console.log(`✅ Indexed: ${url}`);
-    return response.data;
+    })
+    return { success: true, url }
   } catch (error) {
-    console.error(`❌ Failed to index ${url}:`, error.message);
-    return null;
+    return { success: false, url, error: error.message }
   }
 }
 
+/**
+ * Main function - orchestrates the entire indexing process
+ */
 async function indexAllPages() {
-  console.log('🚀 Starting Google Indexing API submission...\n');
-  console.log(`📄 Total pages to index: ${urls.length}\n`);
-
-  let successCount = 0;
-  let failCount = 0;
-
-  for (const url of urls) {
-    const result = await indexURL(url);
-    if (result) {
-      successCount++;
+  console.log('🚀 Starting Google Indexing API submission...\n')
+  
+  // Step 1: Get all URLs from sitemap
+  const urls = await getUrlsFromSitemap()
+  
+  if (urls.length === 0) {
+    console.error('❌ No URLs found. Exiting.')
+    return
+  }
+  
+  console.log(`📄 Total pages to index: ${urls.length}\n`)
+  
+  // Step 2: Authorize with Google (once)
+  let indexing
+  try {
+    const keyPath = path.resolve(__dirname, 'service-account-key.json')
+    const auth = new google.auth.GoogleAuth({
+      keyFile: keyPath,
+      scopes: ['https://www.googleapis.com/auth/indexing']
+    })
+    
+    const authClient = await auth.getClient()
+    console.log('✅ Authorized with Google Indexing API\n')
+    
+    // Create indexing client with auth
+    indexing = google.indexing({ version: 'v3', auth: authClient })
+  } catch (error) {
+    console.error('❌ Authorization failed:', error.message)
+    return
+  }
+  
+  // Step 3: Submit all URLs with progress tracking
+  const results = {
+    success: [],
+    failed: []
+  }
+  
+  for (let i = 0; i < urls.length; i++) {
+    const url = urls[i]
+    const result = await indexUrl(indexing, url)
+    
+    if (result.success) {
+      results.success.push(url)
+      console.log(`✅ Indexed: ${url}`)
     } else {
-      failCount++;
+      results.failed.push({ url, error: result.error })
+      console.error(`❌ Failed: ${url} - ${result.error}`)
     }
     
-    // Add small delay to avoid rate limiting
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Safety delay to avoid rate limiting (except for last URL)
+    if (i < urls.length - 1) {
+      await new Promise(resolve => setTimeout(resolve, DELAY_MS))
+    }
   }
-
-  console.log('\n📊 Indexing Summary:');
-  console.log(`✅ Successfully indexed: ${successCount} pages`);
-  console.log(`❌ Failed: ${failCount} pages`);
-  console.log('\n💡 Check Google Search Console in 24-48 hours to verify indexing.');
+  
+  // Step 4: Summary report
+  console.log('\n📊 Indexing Summary:')
+  console.log(`✅ Successfully indexed: ${results.success.length} pages`)
+  console.log(`❌ Failed: ${results.failed.length} pages`)
+  
+  if (results.failed.length > 0) {
+    console.log('\n❌ Failed URLs:')
+    results.failed.forEach(({ url, error }) => {
+      console.log(`   - ${url}: ${error}`)
+    })
+  }
+  
+  console.log('\n💡 Check Google Search Console in 24-48 hours to verify indexing.')
 }
 
-// Run the indexing
-indexAllPages().catch(console.error);
+// Execute
+indexAllPages().catch(error => {
+  console.error('❌ Fatal error:', error.message)
+  process.exit(1)
+})
