@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
+import ServiceSchema from '@/app/components/schemas/ServiceSchema'
 
 export const metadata: Metadata = {
   title: 'How We Create Accessible Bathrooms: Design & Installation Process',
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 export default function DisabledAssistedBathrooms() {
   return (
     <>
+      <ServiceSchema
+        serviceName="Accessible & Assisted Bathrooms"
+        serviceDescription="Person-centered accessible bathroom design and installation. Wet rooms, walk-in showers, grab rails, and mobility solutions with DFG grant support."
+        serviceUrl="https://fredibuilders.co.uk/services/disabled-assisted-bathrooms"
+        serviceType="HomeAndConstructionBusiness"
+      />
       <Navigation />
       <main className="min-h-screen bg-slate-50">
         <section className="bg-gradient-to-br from-teal-600 to-teal-700 text-white py-16 md:py-24">

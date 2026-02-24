@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
+import ServiceSchema from '@/app/components/schemas/ServiceSchema'
 
 export const metadata: Metadata = {
   title: 'How We Handle Structural Building Repairs: RSJ Beams & Knock-Throughs | Fredi Builders',
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 export default function StructuralBuildingRepairs() {
   return (
     <>
+      <ServiceSchema
+        serviceName="Structural Building Repairs"
+        serviceDescription="RSJ steel beam installation and Building Control compliance. Expert structural alterations, knock-throughs, and load-bearing wall removal."
+        serviceUrl="https://fredibuilders.co.uk/services/structural-building-repairs"
+        serviceType="HomeAndConstructionBusiness"
+      />
       <Navigation />
       <main className="min-h-screen bg-slate-50">
         <section className="bg-gradient-to-br from-teal-600 to-teal-700 text-white py-16 md:py-24">

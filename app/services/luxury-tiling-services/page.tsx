@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
+import ServiceSchema from '@/app/components/schemas/ServiceSchema'
 
 export const metadata: Metadata = {
   title: 'How We Approach Luxury Tiling: Techniques & Craftsmanship | Fredi Builders',
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 export default function LuxuryTilingServices() {
   return (
     <>
+      <ServiceSchema
+        serviceName="Luxury Tiling Services"
+        serviceDescription="Expert installation of marble, porcelain, and designer tiles. Precision tiling with laser-level accuracy for bathrooms, wet rooms, and feature walls."
+        serviceUrl="https://fredibuilders.co.uk/services/luxury-tiling-services"
+        serviceType="HomeAndConstructionBusiness"
+      />
       <Navigation />
       <main className="min-h-screen bg-slate-50">
         <section className="bg-gradient-to-br from-teal-600 to-teal-700 text-white py-16 md:py-24">

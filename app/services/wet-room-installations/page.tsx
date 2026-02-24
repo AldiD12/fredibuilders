@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
+import ServiceSchema from '@/app/components/schemas/ServiceSchema'
 
 export const metadata: Metadata = {
   title: 'How We Install Wet Rooms: Waterproofing & Drainage Guide | Fredi Builders',
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 export default function WetRoomInstallations() {
   return (
     <>
+      <ServiceSchema
+        serviceName="Wet Room Installations"
+        serviceDescription="Modern wet rooms with waterproof tanking and minimal access. Expert installation of level-access showers with proper drainage and waterproofing systems."
+        serviceUrl="https://fredibuilders.co.uk/services/wet-room-installations"
+        serviceType="HomeAndConstructionBusiness"
+      />
       <Navigation />
       <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
