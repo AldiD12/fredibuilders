@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   description: 'Privacy policy for Fredi Builders. Learn how we collect, use, and protect your personal information.',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/privacy'
+  },
+  robots: {
+    index: false,
+    follow: true,
   }
 }
 

@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description: 'Expert bathroom renovations, wet rooms, luxury tiling, structural repairs, and disabled-assisted bathrooms across Surrey and South London.',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/services'
+  },
+  openGraph: {
+    title: 'Bathroom Renovations & Building Services | Fredi Builders',
+    description: 'Expert bathroom renovations, wet rooms, luxury tiling, structural repairs, and disabled-assisted bathrooms across Surrey and South London.',
+    url: 'https://fredibuilders.co.uk/services',
   }
 }
 

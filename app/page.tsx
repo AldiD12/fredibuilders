@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Navigation from './components/Navigation'
 import WhatsAppFloatButton from './components/WhatsAppFloatButton'
@@ -7,6 +8,11 @@ import Footer from './components/Footer'
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://fredibuilders.co.uk'
+  },
+  openGraph: {
+    title: 'Bathroom Fitters Surrey & SW London | 104 Verified Reviews | Fredi Builders',
+    description: 'Expert bathroom renovations, wet rooms & luxury tiling. 9.6/10 Checkatrade score with 104+ verified reviews. Serving South London, Surrey & M25.',
+    url: 'https://fredibuilders.co.uk',
   }
 }
 
@@ -18,10 +24,14 @@ export default function Home() {
       {/* Hero Section */}
       <header className="relative h-[90vh] min-h-[700px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             alt="Luxury marble bathroom with walk-in shower - Premium bathroom renovation by Fredi Builders in Surrey"
-            className="w-full h-full object-cover object-center"
+            className="object-cover object-center"
             src="/images/luxury-marble-bathroom-walk-in-shower.webp"
+            fill
+            priority
+            sizes="100vw"
+            quality={85}
           />
           {/* Gradient Overlay - Dark at top, transparent at bottom */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent"></div>

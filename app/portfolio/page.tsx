@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description: 'See our bathroom renovation work. High-resolution before and after photos from 15 years of projects across Surrey and South London.',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/portfolio'
+  },
+  openGraph: {
+    title: 'Before & After Bathroom Transformations | Fredi Builders',
+    description: 'See our bathroom renovation work. High-resolution before and after photos from 15 years of projects across Surrey and South London.',
+    url: 'https://fredibuilders.co.uk/portfolio',
   }
 }
 

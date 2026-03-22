@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     'Get your fixed-price bathroom renovation quote in 4 simple steps. No hidden costs, no surprises. 9.6/10 rating from 104+ verified customers.',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/contact'
+  },
+  openGraph: {
+    title: 'Get Fixed-Price Quote | Fredi Builders',
+    description: 'Get your fixed-price bathroom renovation quote in 4 simple steps. No hidden costs, no surprises.',
+    url: 'https://fredibuilders.co.uk/contact',
   }
 }
 

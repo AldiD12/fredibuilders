@@ -21,6 +21,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://fredibuilders.co.uk'),
   title: 'Bathroom Fitters Surrey & SW London | 104 Verified Reviews | Fredi Builders',
   description: 'Expert bathroom renovations, wet rooms & luxury tiling. 9.6/10 Checkatrade score with 104+ verified reviews. Serving South London, Surrey & M25. British Standard certified.',
   manifest: '/manifest.json',
@@ -33,6 +34,25 @@ export const metadata: Metadata = {
     apple: [
       { url: '/favicon-144x144.png', sizes: '144x144', type: 'image/png' }
     ]
+  },
+  openGraph: {
+    siteName: 'Fredi Builders',
+    locale: 'en_GB',
+    type: 'website',
+    images: [
+      {
+        url: '/images/luxury-marble-bathroom-walk-in-shower.webp',
+        width: 1200,
+        height: 800,
+        alt: 'Luxury bathroom renovation by Fredi Builders - Surrey & South London'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fredi Builders - Luxury Bathroom Renovations',
+    description: 'Expert bathroom renovations, wet rooms & luxury tiling. 9.6/10 Checkatrade score with 104+ verified reviews.',
+    images: ['/images/luxury-marble-bathroom-walk-in-shower.webp']
   }
 }
 
@@ -44,7 +64,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
       <head>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+        {/* Non-render-blocking Material Icons load */}
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+          as="style"
+        />
         {/* Preload hero image for LCP optimization */}
         <link
           rel="preload"
@@ -54,6 +79,15 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans">
+        {/* Async Material Icons - non-render-blocking */}
+        <Script id="material-icons-loader" strategy="afterInteractive">
+          {`
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://fonts.googleapis.com/icon?family=Material+Icons+Outlined';
+            document.head.appendChild(link);
+          `}
+        </Script>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-Z93ZYR19PT"

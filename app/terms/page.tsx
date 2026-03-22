@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   description: 'Terms of service for Fredi Builders bathroom renovation and building services.',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/terms'
+  },
+  robots: {
+    index: false,
+    follow: true,
   }
 }
 

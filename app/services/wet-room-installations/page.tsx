@@ -6,11 +6,16 @@ import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 import ServiceSchema from '@/app/components/schemas/ServiceSchema'
 
 export const metadata: Metadata = {
-  title: 'How We Install Wet Rooms: Waterproofing & Drainage Guide | Fredi Builders',
-  description: 'Learn about our wet room installation process, from tanking systems to drainage. Discover what makes a successful wet room and how we ensure complete waterproofing.',
-  keywords: 'wet room installation process, how to install wet room, waterproofing bathroom, tanking system, drainage installation',
+  title: 'Wet Room Installation Surrey & SW London | From £6,500 | Fredi Builders',
+  description: 'Expert wet room installations with full waterproofing guarantee. Tanking systems, level-access drainage, and luxury finishes. 9.6/10 Checkatrade rated.',
+  keywords: 'wet room installation surrey, wet room fitters london, waterproof wet room, tanking system installation, level access shower',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/services/wet-room-installations'
+  },
+  openGraph: {
+    title: 'Wet Room Installation Surrey & SW London | Fredi Builders',
+    description: 'Expert wet room installations with full waterproofing guarantee. Tanking systems, level-access drainage, and luxury finishes.',
+    url: 'https://fredibuilders.co.uk/services/wet-room-installations',
   }
 }
 

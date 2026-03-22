@@ -6,11 +6,16 @@ import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 import ServiceSchema from '@/app/components/schemas/ServiceSchema'
 
 export const metadata: Metadata = {
-  title: 'How We Handle Structural Building Repairs: RSJ Beams & Knock-Throughs | Fredi Builders',
-  description: 'Learn about our approach to structural alterations, RSJ steel beam installations, and knock-throughs. Understand Building Control, load calculations, and what makes safe structural work.',
-  keywords: 'structural alterations, RSJ beam installation, knock-through, load bearing wall, building control, structural engineer',
+  title: 'Structural Repairs & RSJ Beams Surrey & SW London | Fredi Builders',
+  description: 'RSJ steel beam installation, load-bearing wall removal, and structural knock-throughs. Building Control compliant with structural engineer sign-off. Fully insured.',
+  keywords: 'RSJ beam installation surrey, structural repairs london, load bearing wall removal, knock through wall, building control approval',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/services/structural-building-repairs'
+  },
+  openGraph: {
+    title: 'Structural Repairs & RSJ Beams | Fredi Builders',
+    description: 'RSJ steel beam installation, load-bearing wall removal, and structural knock-throughs. Building Control compliant.',
+    url: 'https://fredibuilders.co.uk/services/structural-building-repairs',
   }
 }
 

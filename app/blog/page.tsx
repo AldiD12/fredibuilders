@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description: 'Expert guides on bathroom renovations, cost breakdowns, and design tips from 15 years of experience.',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/blog'
+  },
+  openGraph: {
+    title: 'Bathroom Renovation Guides & Tips | Fredi Builders',
+    description: 'Expert guides on bathroom renovations, cost breakdowns, and design tips from 15 years of experience.',
+    url: 'https://fredibuilders.co.uk/blog',
   }
 }
 

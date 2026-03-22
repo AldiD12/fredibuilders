@@ -6,11 +6,16 @@ import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 import ServiceSchema from '@/app/components/schemas/ServiceSchema'
 
 export const metadata: Metadata = {
-  title: 'How We Approach Luxury Tiling: Techniques & Craftsmanship | Fredi Builders',
-  description: 'Learn about our tiling techniques, from large-format porcelain to intricate mosaics. Discover what makes perfect tiling and how we achieve laser-level precision.',
-  keywords: 'tiling techniques, how to tile bathroom, porcelain tile installation, natural stone tiling, grout lines, tile patterns',
+  title: 'Luxury Tiling Services Surrey & SW London | Fredi Builders',
+  description: 'Expert tiling installation: large-format porcelain, natural stone, and designer mosaics. Laser-level precision with 15+ years experience. 104+ five-star reviews.',
+  keywords: 'luxury tiling surrey, bathroom tiling south london, porcelain tile installation, natural stone tiling, large format tiles',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/services/luxury-tiling-services'
+  },
+  openGraph: {
+    title: 'Luxury Tiling Services Surrey & SW London | Fredi Builders',
+    description: 'Expert tiling installation: large-format porcelain, natural stone, and designer mosaics. Laser-level precision.',
+    url: 'https://fredibuilders.co.uk/services/luxury-tiling-services',
   }
 }
 

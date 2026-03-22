@@ -14,7 +14,7 @@ function getRotatingLastMod(index: number, baseDate: Date = new Date()): Date {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.fredibuilders.co.uk'
+  const baseUrl = 'https://fredibuilders.co.uk'
   const currentDate = new Date()
 
   // Homepage - always fresh
@@ -125,13 +125,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Blog page (if exists)
-  const blogPage: MetadataRoute.Sitemap = [
+  // Blog pages
+  const blogPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/blog`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/bathroom-refurbishment-vs-full-renovation-cost-guide-2026`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ]
 
@@ -145,6 +151,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...servicePages,
     ...locationsIndexPage,
     ...locationPages,
-    ...blogPage,
+    ...blogPages,
   ]
 }

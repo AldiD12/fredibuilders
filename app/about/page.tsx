@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description: '15 years of expert bathroom renovations and building services across Surrey and South London. British Standard certified with 104 five-star reviews.',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/about'
+  },
+  openGraph: {
+    title: 'About Fredi Builders | 15 Years Experience',
+    description: '15 years of expert bathroom renovations and building services across Surrey and South London. British Standard certified with 104 five-star reviews.',
+    url: 'https://fredibuilders.co.uk/about',
   }
 }
 

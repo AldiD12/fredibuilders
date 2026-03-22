@@ -7,11 +7,16 @@ import ServiceSchema from '@/app/components/schemas/ServiceSchema'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'How We Renovate Bathrooms: Complete Process Guide | Fredi Builders',
-  description: 'Learn about our proven 5-step bathroom renovation process. From design consultation to final handover, discover what to expect when renovating your bathroom.',
-  keywords: 'bathroom renovation process, how to renovate bathroom, bathroom remodel steps, renovation timeline, what to expect',
+  title: 'Bathroom Renovations Surrey & SW London | From £8,500 | Fredi Builders',
+  description: 'Complete bathroom renovations across Surrey & South London. Fixed-price quotes, 15+ years experience, 9.6/10 Checkatrade rating. From design to handover in 2-3 weeks.',
+  keywords: 'bathroom renovation surrey, bathroom renovation south london, bathroom remodel cost, full bathroom renovation, bathroom fitters',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/services/full-bathroom-renovations'
+  },
+  openGraph: {
+    title: 'Bathroom Renovations Surrey & SW London | Fredi Builders',
+    description: 'Complete bathroom renovations across Surrey & South London. Fixed-price quotes, 15+ years experience.',
+    url: 'https://fredibuilders.co.uk/services/full-bathroom-renovations',
   }
 }
 

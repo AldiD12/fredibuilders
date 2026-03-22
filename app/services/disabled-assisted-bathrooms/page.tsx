@@ -6,11 +6,16 @@ import WhatsAppFloatButton from '@/app/components/WhatsAppFloatButton'
 import ServiceSchema from '@/app/components/schemas/ServiceSchema'
 
 export const metadata: Metadata = {
-  title: 'How We Create Accessible Bathrooms: Design & Installation Process',
-  description: 'Our complete approach to accessible bathroom design: person-centered assessment, mobility solutions, safety features, and dignity-focused installations. Learn our 7-step process.',
-  keywords: 'accessible bathroom design, mobility bathroom process, wet room installation, walk-in shower guide, grab rails placement, disability bathroom planning',
+  title: 'Disabled & Accessible Bathrooms Surrey & SW London | Fredi Builders',
+  description: 'Accessible bathroom installations: walk-in showers, grab rails, level-access wet rooms. Dignity-focused design with DDA compliance. 9.6/10 Checkatrade rated.',
+  keywords: 'accessible bathroom surrey, disabled bathroom installation, walk-in shower elderly, grab rails bathroom, mobility bathroom south london',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/services/disabled-assisted-bathrooms'
+  },
+  openGraph: {
+    title: 'Disabled & Accessible Bathrooms | Fredi Builders',
+    description: 'Accessible bathroom installations: walk-in showers, grab rails, level-access wet rooms. Dignity-focused design.',
+    url: 'https://fredibuilders.co.uk/services/disabled-assisted-bathrooms',
   }
 }
 

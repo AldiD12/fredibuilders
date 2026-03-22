@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
+import BlogPostingSchema from '@/app/components/schemas/BlogPostingSchema'
 
 export const metadata: Metadata = {
   title: 'Bathroom Refurbishment vs Full Renovation: Cost Guide 2026 | Fredi Builders',
@@ -9,12 +10,25 @@ export const metadata: Metadata = {
   keywords: 'bathroom refurbishment cost, bathroom renovation cost, bathroom cost guide 2026, refurbishment vs renovation',
   alternates: {
     canonical: 'https://fredibuilders.co.uk/blog/bathroom-refurbishment-vs-full-renovation-cost-guide-2026'
+  },
+  openGraph: {
+    title: 'Bathroom Refurbishment vs Full Renovation: Cost Guide 2026',
+    description: 'Complete cost breakdown for bathroom refurbishment vs full renovation in 2026. Expert advice from 15 years experience.',
+    url: 'https://fredibuilders.co.uk/blog/bathroom-refurbishment-vs-full-renovation-cost-guide-2026',
+    type: 'article',
   }
 }
 
 export default function CostGuide2026() {
   return (
     <>
+      <BlogPostingSchema
+        title="Bathroom Refurbishment vs Full Renovation: Cost Guide 2026"
+        description="Complete cost breakdown for bathroom refurbishment vs full renovation in 2026. Expert advice from 15 years experience."
+        url="https://fredibuilders.co.uk/blog/bathroom-refurbishment-vs-full-renovation-cost-guide-2026"
+        datePublished="2026-02-01"
+        dateModified="2026-02-15"
+      />
       <Navigation />
       <main className="min-h-screen bg-white">
         {/* Article Header */}
